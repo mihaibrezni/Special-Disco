@@ -74,7 +74,7 @@ int main() {
 
   for (int width = 1; width < NUM_ELEMENTS; width *= 2) {
     // TODO 0: Call the mergeSortGPU kernel with the appropriate arguments
-    mergeSortGPU<<<blocks_no, block_size>>>(d_array, d_tmp, NUM_ELEMENTS, width);
+    mergeSortGPU<<<blocks_no, block_size>>>(d_array, d_tmp, NUM_ELEMENTS, width*2);
   }
   cudaDeviceSynchronize();
 
